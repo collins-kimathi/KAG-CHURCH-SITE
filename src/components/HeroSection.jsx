@@ -1,31 +1,28 @@
-import { useState } from 'react'
 import SiteHeader from './SiteHeader'
 
 function HeroSection() {
-  const [isVideoReady, setIsVideoReady] = useState(false)
-  const [videoFailed, setVideoFailed] = useState(false)
-
   return (
     <header className="hero">
-      <div className={`video-layer${isVideoReady ? ' is-ready' : ''}`}>
-        {!videoFailed && (
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="video-media"
-            onCanPlay={() => setIsVideoReady(true)}
-            onError={() => setVideoFailed(true)}
-            poster="https://images.pexels.com/photos/2014775/pexels-photo-2014775.jpeg?auto=compress&cs=tinysrgb&w=1400"
-          >
-            <source src="/church-hero.mp4" type="video/mp4" />
-            <source
-              src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
-              type="video/mp4"
-            />
-          </video>
-        )}
+      <div className="video-layer">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="video-media"
+          poster="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&w=1400"
+        >
+          <source src="/church-hero.mp4" type="video/mp4" />
+          <source
+            src="https://cdn.coverr.co/videos/coverr-a-woman-walks-down-the-stairs-from-the-church-1158/1080p.mp4"
+            type="video/mp4"
+          />
+          <source
+            src="https://cdn.coverr.co/videos/coverr-praying-at-sunset-1589/1080p.mp4"
+            type="video/mp4"
+          />
+        </video>
         <div className="video-fallback-art" />
       </div>
       <div className="overlay" />
@@ -33,16 +30,20 @@ function HeroSection() {
       <SiteHeader transparent />
 
       <div className="hero-content">
-        <p className="eyebrow">KAG | Nairobi, Kenya</p>
-        <h1>A Christ-Centered Family For Worship, Discipleship, And Mission</h1>
-        <p>
-          Join us for vibrant worship, sound biblical teaching, and practical
-          outreach across Kenya.
+        <p className="eyebrow" data-reveal>
+          Welcome To KAG Church
         </p>
-        <div className="hero-actions">
-          <a href="#/contact">Service Times</a>
-          <a className="secondary" href="#/ministries">
-            Explore All Ministries
+        <h1 data-reveal style={{ '--reveal-delay': '120ms' }}>
+          Loving God, Loving Others, And Serving The World
+        </h1>
+        <p data-reveal style={{ '--reveal-delay': '220ms' }}>
+          Join us in worship, prayer, and Bible teaching as we build strong
+          families and transform communities with the gospel of Jesus Christ.
+        </p>
+        <div className="hero-actions" data-reveal style={{ '--reveal-delay': '320ms' }}>
+          <a href="#/about-us">Discover More</a>
+          <a className="secondary" href="#/contact-us">
+            Join This Sunday
           </a>
         </div>
       </div>

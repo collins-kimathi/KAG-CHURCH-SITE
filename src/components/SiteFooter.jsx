@@ -13,11 +13,12 @@ function SiteFooter() {
         <article>
           <h3>Quick Links</h3>
           <p>
-            <a href="#/">Home</a> | <a href="#/about">About</a> |{' '}
-            <a href="#/ministries">Ministries</a>
+            <a href="#/">Home</a> | <a href="#/about-us">About Us</a> |{' '}
+            <a href="#/pastor">Pastor</a>
           </p>
           <p>
-            <a href="#/sermons">Sermons</a> | <a href="#/contact">Contact</a>
+            <a href="#/gallery">Gallery</a> |{' '}
+            <a href="#/contact-us">Contact Us</a>
           </p>
         </article>
 
@@ -29,7 +30,8 @@ function SiteFooter() {
         </article>
       </div>
       <p className="footer-note">
-        © {new Date().getFullYear()} Kenya Assemblies of God. All rights reserved.
+        &copy; {new Date().getFullYear()} Kenya Assemblies of God. All rights
+        reserved.
       </p>
     </footer>
   )

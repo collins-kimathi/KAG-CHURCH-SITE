@@ -1,9 +1,9 @@
 const navLinks = [
   { label: 'Home', path: '/' },
-  { label: 'About', path: '/about' },
-  { label: 'Ministries', path: '/ministries' },
-  { label: 'Sermons', path: '/sermons' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'About Us', path: '/about-us' },
+  { label: 'Pastor', path: '/pastor' },
+  { label: 'Gallery', path: '/gallery' },
+  { label: 'Contact Us', path: '/contact-us' },
 ]
 
 function getActiveRoute() {
@@ -35,6 +35,10 @@ function SiteHeader({ transparent = false }) {
           </a>
         ))}
       </nav>
+
+      <a href="#/contact-us" className="header-cta">
+        Plan Visit
+      </a>
     </header>
   )
 }

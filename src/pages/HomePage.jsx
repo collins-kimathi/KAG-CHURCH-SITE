@@ -1,48 +1,48 @@
 import EventCard from '../components/EventCard'
 import FooterCta from '../components/FooterCta'
 import HeroSection from '../components/HeroSection'
-import MinistryCard from '../components/MinistryCard'
 import SectionHeading from '../components/SectionHeading'
 import ServiceCard from '../components/ServiceCard'
 import SiteFooter from '../components/SiteFooter'
 
 const services = [
-  { name: 'Main Service', time: 'Sunday | 9:00 AM - 12:00 PM' },
-  { name: 'Youth Service', time: 'Saturday | 3:00 PM - 5:00 PM' },
-  { name: 'Midweek Prayer', time: 'Wednesday | 6:00 PM - 7:30 PM' },
+  { name: 'Sunday Worship', time: 'Every Sunday | 9:00 AM - 12:00 PM' },
+  { name: 'Bible Study', time: 'Every Tuesday | 6:00 PM - 7:30 PM' },
+  { name: 'Prayer Service', time: 'Every Wednesday | 6:00 PM - 7:30 PM' },
 ]
 
 const ministries = [
   {
-    name: 'Children Ministry',
-    description: 'Biblical foundations, joyful worship, and character formation.',
+    title: 'Children Ministry',
+    text: 'Helping children know Jesus through worship, play, and Scripture.',
+    image:
+      'https://images.pexels.com/photos/1263349/pexels-photo-1263349.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
-    name: 'Youth & Young Adults',
-    description: 'Mentorship, discipleship groups, and campus-focused missions.',
+    title: 'Youth Fellowship',
+    text: 'Building bold and grounded young believers through mentoring.',
+    image:
+      'https://images.pexels.com/photos/8468472/pexels-photo-8468472.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
-    name: 'Women & Men Fellowships',
-    description:
-      'Prayer, accountability, leadership development, and practical care.',
-  },
-  {
-    name: 'Missions & Outreach',
-    description:
-      'Church planting, compassion work, and evangelism in local communities.',
+    title: 'Community Outreach',
+    text: 'Serving families and neighborhoods with practical compassion.',
+    image:
+      'https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
 ]
 
-const events = [
-  { date: 'March 14, 2026', title: 'Family Prayer Night' },
-  { date: 'April 4, 2026', title: 'Youth Worship Experience' },
-  { date: 'April 18, 2026', title: 'Community Outreach Day' },
+const sermons = [
+  { date: 'Feb 22, 2026', title: 'Walking By Faith In Every Season' },
+  { date: 'Feb 15, 2026', title: 'The Power Of Persistent Prayer' },
+  { date: 'Feb 8, 2026', title: 'Built On Christ The Solid Rock' },
 ]
 
-const highlights = [
-  'Spirit-led worship and sound biblical teaching',
-  'Intentional discipleship for every age group',
-  'Community transformation through missions and outreach',
+const galleryPreview = [
+  'https://images.pexels.com/photos/8923494/pexels-photo-8923494.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://images.pexels.com/photos/236339/pexels-photo-236339.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://images.pexels.com/photos/8815077/pexels-photo-8815077.jpeg?auto=compress&cs=tinysrgb&w=1200',
 ]
 
 function HomePage() {
@@ -51,71 +51,134 @@ function HomePage() {
       <HeroSection />
 
       <main>
-        <section id="services" className="section intro-grid">
-          <article>
-            <SectionHeading
-              eyebrow="Weekly Gatherings"
-              title="Worship With Us This Sunday"
-              description="We gather as one body to lift up Jesus, pray for one another, and grow deeper in God&apos;s Word."
+        <section className="section home-about">
+          <article className="image-panel" data-reveal>
+            <img
+              src="https://images.pexels.com/photos/267491/pexels-photo-267491.jpeg?auto=compress&cs=tinysrgb&w=1400"
+              alt="Church interior"
             />
           </article>
-
-          {services.map((service) => (
-            <ServiceCard key={service.name} name={service.name} time={service.time} />
-          ))}
+          <article data-reveal style={{ '--reveal-delay': '120ms' }}>
+            <SectionHeading
+              eyebrow="About Our Church"
+              title="A Place To Encounter God And Grow In Faith"
+              description="Kenya Assemblies of God is a Bible-believing Pentecostal church family committed to worship, discipleship, and mission."
+            />
+            <ul className="list check-list">
+              <li>Strong biblical teaching rooted in God&apos;s Word</li>
+              <li>Spirit-led worship and prayer gatherings</li>
+              <li>A warm church family for all generations</li>
+            </ul>
+            <a className="button-link" href="#/about-us">
+              Read More
+            </a>
+          </article>
         </section>
 
-        <section id="ministries" className="section ministries">
+        <section className="section">
           <SectionHeading
-            eyebrow="Ministry Life"
-            title="Growing Strong Believers Across Generations"
-            description="Every ministry in KAG is designed to help people know Christ, grow in faith, and serve with purpose."
+            eyebrow="Worship With Us"
+            title="Regular Gatherings"
+            description="Join one of our weekly services and be part of what God is doing."
           />
-
-          <div className="ministry-grid">
-            {ministries.map((ministry) => (
-              <MinistryCard
-                key={ministry.name}
-                name={ministry.name}
-                description={ministry.description}
+          <div className="grid-three">
+            {services.map((service, index) => (
+              <ServiceCard
+                key={service.name}
+                name={service.name}
+                time={service.time}
+                delay={index * 120}
               />
             ))}
           </div>
         </section>
 
-        <section className="section highlights">
-          <SectionHeading eyebrow="Why KAG" title="A Church Built On Scripture And Prayer" />
-          <div className="highlights-grid">
-            {highlights.map((item) => (
-              <article key={item} className="panel">
-                <p>{item}</p>
+        <section className="section stat-strip" data-reveal>
+          <article data-reveal>
+            <h3>25+</h3>
+            <p>Years Of Ministry</p>
+          </article>
+          <article data-reveal style={{ '--reveal-delay': '90ms' }}>
+            <h3>1200+</h3>
+            <p>Members & Regular Attendees</p>
+          </article>
+          <article data-reveal style={{ '--reveal-delay': '180ms' }}>
+            <h3>35+</h3>
+            <p>Active Church Ministries</p>
+          </article>
+          <article data-reveal style={{ '--reveal-delay': '270ms' }}>
+            <h3>50+</h3>
+            <p>Outreach Programs Annually</p>
+          </article>
+        </section>
+
+        <section className="section">
+          <SectionHeading
+            eyebrow="Our Ministries"
+            title="Serving People At Every Stage Of Life"
+          />
+          <div className="feature-grid">
+            {ministries.map((item, index) => (
+              <article
+                key={item.title}
+                className="feature-card"
+                data-reveal
+                style={{ '--reveal-delay': `${index * 120}ms` }}
+              >
+                <img src={item.image} alt={item.title} />
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="section split">
-          <article className="vision">
-            <SectionHeading
-              eyebrow="Our Vision"
-              title="To Raise Spirit-Filled Disciples Transforming Kenya For Christ"
-            />
+        <section className="section split-banner">
+          <article data-reveal>
+            <p className="eyebrow">Our Vision</p>
+            <h2>To Raise Spirit-Filled Disciples Transforming Kenya For Christ</h2>
           </article>
-          <article className="mission">
+          <article data-reveal style={{ '--reveal-delay': '120ms' }}>
             <p className="eyebrow">Our Mission</p>
             <p>
-              To glorify God through worship, equip believers through biblical
-              teaching, and serve communities through compassionate mission.
+              We glorify God through Christ-centered worship, intentional
+              discipleship, and compassionate outreach to our communities.
             </p>
           </article>
         </section>
 
         <section className="section events">
-          <SectionHeading eyebrow="Upcoming Events" title="Church Calendar" />
+          <SectionHeading eyebrow="Latest Sermons" title="Recent Messages" />
           <div className="event-list">
-            {events.map((event) => (
-              <EventCard key={event.title} date={event.date} title={event.title} />
+            {sermons.map((sermon, index) => (
+              <EventCard
+                key={sermon.title}
+                date={sermon.date}
+                title={sermon.title}
+                delay={index * 120}
+              />
             ))}
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="gallery-strip">
+            {galleryPreview.map((image, index) => (
+              <img
+                key={image}
+                src={image}
+                alt="Church gallery highlight"
+                data-reveal
+                style={{ '--reveal-delay': `${index * 90}ms` }}
+              />
+            ))}
+          </div>
+          <div className="centered-link" data-reveal style={{ '--reveal-delay': '220ms' }}>
+            <a className="button-link" href="#/gallery">
+              View Full Gallery
+            </a>
           </div>
         </section>
       </main>

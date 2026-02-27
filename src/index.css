@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
 *,
 *::before,
@@ -14,6 +14,6 @@ body {
 }
 
 body {
-  font-family: 'Outfit', 'Segoe UI', sans-serif;
-  background: #090c0e;
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  background: #f7f3ec;
 }

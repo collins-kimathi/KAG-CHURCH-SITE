@@ -1,11 +1,11 @@
 import SiteHeader from './SiteHeader'
 
-function PageHero({ eyebrow, title, subtitle }) {
+function PageHero({ title, subtitle, breadcrumb }) {
   return (
     <section className="page-hero">
-      <SiteHeader />
-      <div className="page-hero-content">
-        <p className="eyebrow">{eyebrow}</p>
+      <SiteHeader transparent />
+      <div className="page-hero-content" data-reveal>
+        <p className="breadcrumb">Home / {breadcrumb}</p>
         <h1>{title}</h1>
         <p>{subtitle}</p>
       </div>

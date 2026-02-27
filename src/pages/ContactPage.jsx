@@ -2,59 +2,89 @@ import PageHero from '../components/PageHero'
 import SectionHeading from '../components/SectionHeading'
 import SiteFooter from '../components/SiteFooter'
 
-const serviceSchedule = [
-  'Sunday Celebration Service: 9:00 AM - 12:00 PM',
-  'Wednesday Prayer & Worship: 6:00 PM - 7:30 PM',
-  'Saturday Youth Service: 3:00 PM - 5:00 PM',
+const contactItems = [
+  { title: 'Our Address', value: 'KAG Church, Nairobi County, Kenya' },
+  { title: 'Call Us', value: '+254 700 000 000' },
+  { title: 'Email Us', value: 'info@kagchurch.org' },
 ]
 
 function ContactPage() {
   return (
     <div className="site-shell">
       <PageHero
-        eyebrow="Contact KAG"
-        title="Plan Your Visit And Connect With Us"
-        subtitle="Whether you are new to church or looking for a spiritual home, we are ready to welcome you."
+        breadcrumb="Contact Us"
+        title="Contact Us"
+        subtitle="Reach out to our church office for prayer, counseling, service inquiries, and ministry information."
       />
 
       <main>
-        <section className="section two-column">
-          <article className="panel">
-            <SectionHeading eyebrow="Visit Details" title="Service Times" />
-            <ul className="list">
-              {serviceSchedule.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-
-          <article className="panel">
-            <SectionHeading eyebrow="Reach Out" title="Church Office" />
-            <p>KAG Church, Nairobi County, Kenya</p>
-            <p>Phone: +254 700 000 000</p>
-            <p>Email: info@kagchurch.org</p>
-          </article>
+        <section className="section">
+          <div className="grid-three">
+            {contactItems.map((item, index) => (
+              <article
+                key={item.title}
+                className="card contact-card"
+                data-reveal
+                style={{ '--reveal-delay': `${index * 100}ms` }}
+              >
+                <h3>{item.title}</h3>
+                <p>{item.value}</p>
+              </article>
+            ))}
+          </div>
         </section>
 
-        <section className="section">
-          <article className="panel contact-form">
+        <section className="section two-column contact-layout">
+          <article className="panel contact-form" data-reveal>
             <SectionHeading
-              eyebrow="Send A Message"
-              title="We Will Get Back To You"
-              description="Share your prayer request, inquiry, or testimony."
+              eyebrow="Get In Touch"
+              title="Send Us A Message"
+              description="Fill out the form and our team will get back to you."
             />
+
             <form>
-              <label htmlFor="name">Name</label>
-              <input id="name" type="text" placeholder="Your full name" />
+              <label htmlFor="contact-name">Name</label>
+              <input id="contact-name" type="text" placeholder="Your full name" />
 
-              <label htmlFor="email">Email</label>
-              <input id="email" type="email" placeholder="Your email address" />
+              <label htmlFor="contact-email">Email</label>
+              <input
+                id="contact-email"
+                type="email"
+                placeholder="Your email address"
+              />
 
-              <label htmlFor="message">Message</label>
-              <textarea id="message" rows="5" placeholder="Write your message here" />
+              <label htmlFor="contact-phone">Phone</label>
+              <input id="contact-phone" type="tel" placeholder="Your phone number" />
 
-              <button type="button">Send Message</button>
+              <label htmlFor="contact-message">Message</label>
+              <textarea
+                id="contact-message"
+                rows="5"
+                placeholder="Write your prayer request or message"
+              />
+
+              <button type="button">Submit Message</button>
             </form>
+          </article>
+
+          <article
+            className="panel map-panel"
+            data-reveal
+            style={{ '--reveal-delay': '120ms' }}
+          >
+            <SectionHeading
+              eyebrow="Visit Office"
+              title="Church Location"
+              description="You can also visit us physically during office hours."
+            />
+            <iframe
+              title="KAG Church Map"
+              className="map-embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Nairobi%20Kenya&output=embed"
+            />
+            <p>Office Hours: Monday - Friday, 8:00 AM - 5:00 PM</p>
           </article>
         </section>
       </main>
