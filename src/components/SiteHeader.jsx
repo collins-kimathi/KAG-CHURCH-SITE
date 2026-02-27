@@ -1,0 +1,42 @@
+const navLinks = [
+  { label: 'Home', path: '/' },
+  { label: 'About', path: '/about' },
+  { label: 'Ministries', path: '/ministries' },
+  { label: 'Sermons', path: '/sermons' },
+  { label: 'Contact', path: '/contact' },
+]
+
+function getActiveRoute() {
+  if (typeof window === 'undefined') {
+    return '/'
+  }
+
+  const route = window.location.hash.replace('#', '') || '/'
+  return route.startsWith('/') ? route : `/${route}`
+}
+
+function SiteHeader({ transparent = false }) {
+  const activeRoute = getActiveRoute()
+
+  return (
+    <header className={`site-header${transparent ? ' is-transparent' : ''}`}>
+      <a href="#/" className="brand-link">
+        Kenya Assemblies of God
+      </a>
+
+      <nav className="site-nav" aria-label="Main navigation">
+        {navLinks.map((link) => (
+          <a
+            key={link.path}
+            className={activeRoute === link.path ? 'active' : ''}
+            href={`#${link.path}`}
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+    </header>
+  )
+}
+
+export default SiteHeader
