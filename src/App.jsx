@@ -10,6 +10,7 @@ const routeMap = {
   '/': HomePage,
   '/about-us': AboutPage,
   '/contact-us': ContactPage,
+  '/ministers': PastorPage,
   '/pastor': PastorPage,
   '/gallery': GalleryPage,
   '/about': AboutPage,

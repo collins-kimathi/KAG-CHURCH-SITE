@@ -1,7 +1,7 @@
 const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'About Us', path: '/about-us' },
-  { label: 'Pastor', path: '/pastor' },
+  { label: 'Ministers', path: '/ministers' },
   { label: 'Gallery', path: '/gallery' },
   { label: 'Contact Us', path: '/contact-us' },
 ]
@@ -12,7 +12,8 @@ function getActiveRoute() {
   }
 
   const route = window.location.hash.replace('#', '') || '/'
-  return route.startsWith('/') ? route : `/${route}`
+  const normalizedRoute = route.startsWith('/') ? route : `/${route}`
+  return normalizedRoute === '/pastor' ? '/ministers' : normalizedRoute
 }
 
 function SiteHeader({ transparent = false }) {
