@@ -14,7 +14,7 @@ function SiteFooter() {
           <h3>Quick Links</h3>
           <p>
             <a href="#/">Home</a> | <a href="#/about-us">About Us</a> |{' '}
-            <a href="#/pastor">Pastor</a>
+            <a href="#/ministers">Ministers</a>
           </p>
           <p>
             <a href="#/gallery">Gallery</a> |{' '}

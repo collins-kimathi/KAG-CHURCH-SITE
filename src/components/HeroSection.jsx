@@ -11,7 +11,6 @@ function HeroSection() {
           playsInline
           preload="metadata"
           className="video-media"
-          poster="https://images.pexels.com/photos/161154/stained-glass-spiral-circle-pattern-161154.jpeg?auto=compress&cs=tinysrgb&w=1400"
         >
           <source src="/church-hero.mp4" type="video/mp4" />
           <source

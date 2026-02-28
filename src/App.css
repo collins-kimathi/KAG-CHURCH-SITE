@@ -584,14 +584,74 @@ h2 {
   margin: 0.9rem 0;
 }
 
-.pastor-photo img {
-  object-position: center top;
+.minister-categories {
+  display: grid;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
 }
 
-.pastor-quote {
-  border-left: 3px solid var(--gold);
-  padding-left: 0.8rem;
-  font-style: italic;
+.minister-category {
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--white);
+  padding: 1rem;
+}
+
+.minister-category-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.minister-category-head p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 68ch;
+}
+
+.minister-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.minister-card {
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  overflow: hidden;
+  background: #fcfaf6;
+}
+
+.minister-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.minister-card div {
+  padding: 0.95rem;
+}
+
+.minister-card h3 {
+  font-size: 1.16rem;
+}
+
+.minister-card p {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+}
+
+.minister-role {
+  margin: 0;
+  color: #6b4a10;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .timeline {
@@ -745,7 +805,8 @@ h2 {
   .feature-grid,
   .event-list,
   .gallery-grid,
-  .timeline {
+  .timeline,
+  .minister-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -776,6 +837,11 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .minister-category-head {
+    display: grid;
+    align-items: start;
+  }
+
   .cta-banner {
     display: grid;
   }
@@ -792,6 +858,7 @@ h2 {
   .event-list,
   .gallery-grid,
   .timeline,
+  .minister-grid,
   .gallery-strip,
   .stat-strip {
     grid-template-columns: 1fr;
