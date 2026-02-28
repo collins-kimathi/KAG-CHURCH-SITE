@@ -1,9 +1,11 @@
+import { useState } from 'react'
 import EventCard from '../components/EventCard'
 import FooterCta from '../components/FooterCta'
 import HeroSection from '../components/HeroSection'
 import SectionHeading from '../components/SectionHeading'
 import ServiceCard from '../components/ServiceCard'
 import SiteFooter from '../components/SiteFooter'
+import VideoModal from '../components/VideoModal'
 
 const services = [
   { name: 'Sunday Worship', time: 'Every Sunday | 9:00 AM - 12:00 PM' },
@@ -33,19 +35,45 @@ const ministries = [
 ]
 
 const sermons = [
-  { date: 'Feb 22, 2026', title: 'Walking By Faith In Every Season' },
-  { date: 'Feb 15, 2026', title: 'The Power Of Persistent Prayer' },
-  { date: 'Feb 8, 2026', title: 'Built On Christ The Solid Rock' },
+  {
+    id: 'FqehoHp_Qos',
+    date: 'KAG Chuka Channel',
+    type: 'Sermon',
+    speaker: 'Rev. Josiah Kariuki',
+    title: 'How Can We Have Hope When Everything Looks Hopeless? - Rev. Josiah Kariuki',
+    description:
+      'A faith-building message on finding biblical hope even in difficult and uncertain seasons.',
+  },
+  {
+    id: 'IltAy2cKgWg',
+    date: 'KAG Chuka Channel',
+    type: 'Sermon',
+    speaker: 'Rev. Josiah Kariuki',
+    title: 'God is Love - Rev. Josiah Kariuki',
+    description:
+      'A sermon focused on the love of God and how believers are called to live it out daily.',
+  },
+  {
+    id: 'TOfv0y3Pzhk',
+    date: 'KAG Chuka Channel',
+    type: 'Sermon',
+    speaker: 'Rev. Josiah Kariuki',
+    title: 'The Spirit of Fear - Rev. Josiah Kariuki',
+    description:
+      'Biblical teaching on overcoming fear through faith, prayer, and trust in God.',
+  },
 ]
 
 const galleryPreview = [
-  'https://images.pexels.com/photos/8923494/pexels-photo-8923494.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/236339/pexels-photo-236339.jpeg?auto=compress&cs=tinysrgb&w=1200',
-  'https://images.pexels.com/photos/8815077/pexels-photo-8815077.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  'https://i.ytimg.com/vi/FqehoHp_Qos/hqdefault.jpg',
+  'https://i.ytimg.com/vi/IltAy2cKgWg/hqdefault.jpg',
+  'https://i.ytimg.com/vi/TOfv0y3Pzhk/hqdefault.jpg',
+  'https://i.ytimg.com/vi/9Nnk63y2naY/hqdefault.jpg',
 ]
 
 function HomePage() {
+  const [activeSermon, setActiveSermon] = useState(null)
+
   return (
     <div className="site-shell">
       <HeroSection />
@@ -150,7 +178,10 @@ function HomePage() {
         </section>
 
         <section className="section events">
-          <SectionHeading eyebrow="Latest Sermons" title="Recent Messages" />
+          <SectionHeading
+            eyebrow="Latest Sermons"
+            title="Recent Messages From KAG Chuka YouTube"
+          />
           <div className="event-list">
             {sermons.map((sermon, index) => (
               <EventCard
@@ -158,8 +189,22 @@ function HomePage() {
                 date={sermon.date}
                 title={sermon.title}
                 delay={index * 120}
+                type={sermon.type}
+                speaker={sermon.speaker}
+                description={sermon.description}
+                onOpen={() => setActiveSermon(sermon)}
               />
             ))}
+          </div>
+          <div className="centered-link" data-reveal style={{ '--reveal-delay': '220ms' }}>
+            <a
+              className="button-link"
+              href="https://www.youtube.com/@kagchukachurch"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open KAG Church Channel
+            </a>
           </div>
         </section>
 
@@ -185,6 +230,17 @@ function HomePage() {
 
       <FooterCta />
       <SiteFooter />
+      <VideoModal
+        videoId={activeSermon?.id}
+        title={activeSermon?.title}
+        subtitle={
+          activeSermon
+            ? `${activeSermon.type} | ${activeSermon.speaker}`
+            : undefined
+        }
+        description={activeSermon?.description}
+        onClose={() => setActiveSermon(null)}
+      />
     </div>
   )
 }
