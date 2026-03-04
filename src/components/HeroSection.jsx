@@ -40,8 +40,8 @@ function HeroSection() {
           families and transform communities with the gospel of Jesus Christ.
         </p>
         <div className="hero-actions" data-reveal style={{ '--reveal-delay': '320ms' }}>
-          <a href="#/about-us">Discover More</a>
-          <a className="secondary" href="#/contact-us">
+          <a href="/about-us">Discover More</a>
+          <a className="secondary" href="/contact-us">
             Join This Sunday
           </a>
         </div>

@@ -17,24 +17,37 @@ const routeMap = {
   '/contact': ContactPage,
 }
 
-function getRouteFromHash() {
+function normalizeRoute(route) {
+  if (!route || route === '/') {
+    return '/'
+  }
+
+  return route.startsWith('/') ? route : `/${route}`
+}
+
+function getRouteFromLocation() {
   if (typeof window === 'undefined') {
     return '/'
   }
 
-  const rawRoute = window.location.hash.replace('#', '') || '/'
-  const normalizedRoute = rawRoute.startsWith('/') ? rawRoute : `/${rawRoute}`
+  const rawHashRoute = window.location.hash.replace(/^#/, '')
+  const rawPathRoute = window.location.pathname
+  const normalizedRoute = normalizeRoute(rawHashRoute || rawPathRoute)
 
   return routeMap[normalizedRoute] ? normalizedRoute : '/'
 }
 
 function App() {
-  const [route, setRoute] = useState(getRouteFromHash)
+  const [route, setRoute] = useState(getRouteFromLocation)
 
   useEffect(() => {
-    const handleHashChange = () => setRoute(getRouteFromHash())
-    window.addEventListener('hashchange', handleHashChange)
-    return () => window.removeEventListener('hashchange', handleHashChange)
+    const handleLocationChange = () => setRoute(getRouteFromLocation())
+    window.addEventListener('hashchange', handleLocationChange)
+    window.addEventListener('popstate', handleLocationChange)
+    return () => {
+      window.removeEventListener('hashchange', handleLocationChange)
+      window.removeEventListener('popstate', handleLocationChange)
+    }
   }, [])
 
   useEffect(() => {

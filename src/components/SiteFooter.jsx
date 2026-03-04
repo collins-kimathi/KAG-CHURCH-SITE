@@ -13,12 +13,11 @@ function SiteFooter() {
         <article>
           <h3>Quick Links</h3>
           <p>
-            <a href="#/">Home</a> | <a href="#/about-us">About Us</a> |{' '}
-            <a href="#/ministers">Ministers</a>
+            <a href="/">Home</a> | <a href="/about-us">About Us</a> |{' '}
+            <a href="/ministers">Ministers</a>
           </p>
           <p>
-            <a href="#/gallery">Gallery</a> |{' '}
-            <a href="#/contact-us">Contact Us</a>
+            <a href="/gallery">Gallery</a> | <a href="/contact-us">Contact Us</a>
           </p>
         </article>
 

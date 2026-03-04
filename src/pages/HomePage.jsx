@@ -97,7 +97,7 @@ function HomePage() {
               <li>Spirit-led worship and prayer gatherings</li>
               <li>A warm church family for all generations</li>
             </ul>
-            <a className="button-link" href="#/about-us">
+            <a className="button-link" href="/about-us">
               Read More
             </a>
           </article>
@@ -221,7 +221,7 @@ function HomePage() {
             ))}
           </div>
           <div className="centered-link" data-reveal style={{ '--reveal-delay': '220ms' }}>
-            <a className="button-link" href="#/gallery">
+            <a className="button-link" href="/gallery">
               View Full Gallery
             </a>
           </div>

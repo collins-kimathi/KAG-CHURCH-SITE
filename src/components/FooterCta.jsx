@@ -6,7 +6,7 @@ function FooterCta() {
         <h2>Let Our Church Family Walk With You</h2>
         <p>Sunday Service at 9:00 AM | Nairobi, Kenya</p>
       </div>
-      <a href="#/contact-us">Contact Church Office</a>
+      <a href="/contact-us">Contact Church Office</a>
     </section>
   )
 }

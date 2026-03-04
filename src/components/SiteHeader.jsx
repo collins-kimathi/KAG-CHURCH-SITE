@@ -11,7 +11,7 @@ function getActiveRoute() {
     return '/'
   }
 
-  const route = window.location.hash.replace('#', '') || '/'
+  const route = window.location.hash.replace('#', '') || window.location.pathname || '/'
   const normalizedRoute = route.startsWith('/') ? route : `/${route}`
   return normalizedRoute === '/pastor' ? '/ministers' : normalizedRoute
 }
@@ -21,7 +21,7 @@ function SiteHeader({ transparent = false }) {
 
   return (
     <header className={`site-header${transparent ? ' is-transparent' : ''}`}>
-      <a href="#/" className="brand-link">
+      <a href="/" className="brand-link">
         Kenya Assemblies of God
       </a>
 
@@ -30,14 +30,14 @@ function SiteHeader({ transparent = false }) {
           <a
             key={link.path}
             className={activeRoute === link.path ? 'active' : ''}
-            href={`#${link.path}`}
+            href={link.path}
           >
             {link.label}
           </a>
         ))}
       </nav>
 
-      <a href="#/contact-us" className="header-cta">
+      <a href="/contact-us" className="header-cta">
         Plan Visit
       </a>
     </header>
