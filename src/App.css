@@ -40,10 +40,18 @@
   font-size: 0.76rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
 }
 
 .site-header:not(.is-transparent) .brand-link {
   color: var(--ink);
+}
+
+.brand-logo {
+  width: auto;
+  height: 52px;
+  display: block;
 }
 
 .site-nav {

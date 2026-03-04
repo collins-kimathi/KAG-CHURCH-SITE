@@ -1,3 +1,5 @@
+import kagLogo from '../../Images/KAG-LOGO.webp'
+
 const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'About Us', path: '/about-us' },
@@ -22,7 +24,7 @@ function SiteHeader({ transparent = false }) {
   return (
     <header className={`site-header${transparent ? ' is-transparent' : ''}`}>
       <a href="/" className="brand-link">
-        Kenya Assemblies of God
+        <img className="brand-logo" src={kagLogo} alt="Kenya Assemblies of God logo" />
       </a>
 
       <nav className="site-nav" aria-label="Main navigation">
