@@ -82,7 +82,7 @@ function ContactPage() {
               className="map-embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Nairobi%20Kenya&output=embed"
+              src="https://maps.app.goo.gl/Xs6TJa8ySVVEH3mJ6"
             />
             <p>Office Hours: Monday - Friday, 8:00 AM - 5:00 PM</p>
           </article>
