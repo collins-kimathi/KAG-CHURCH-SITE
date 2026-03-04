@@ -30,14 +30,14 @@ function HeroSection() {
 
       <div className="hero-content">
         <p className="eyebrow" data-reveal>
-          Welcome To KAG Church
+          Kenya Assemblies of God (KAG)
         </p>
         <h1 data-reveal style={{ '--reveal-delay': '120ms' }}>
-          Loving God, Loving Others, And Serving The World
+          A Pentecostal Movement Planted In Kenya In 1972
         </h1>
         <p data-reveal style={{ '--reveal-delay': '220ms' }}>
-          Join us in worship, prayer, and Bible teaching as we build strong
-          families and transform communities with the gospel of Jesus Christ.
+          KAG is a family of over 5,000 churches in Kenya (2026), with a
+          vision to double our reach and membership by 2030.
         </p>
         <div className="hero-actions" data-reveal style={{ '--reveal-delay': '320ms' }}>
           <a href="/about-us">Discover More</a>

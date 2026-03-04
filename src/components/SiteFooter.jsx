@@ -5,8 +5,9 @@ function SiteFooter() {
         <article>
           <h3>Kenya Assemblies of God</h3>
           <p>
-            A Pentecostal church family committed to worship, discipleship, and
-            community transformation in Kenya.
+            A Pentecostal denomination planted in Kenya in 1972, now a family
+            of over 5,000 churches (2026), committed to evangelizing,
+            equipping, and engaging communities with the gospel of Jesus Christ.
           </p>
         </article>
 

@@ -15,20 +15,20 @@ const services = [
 
 const ministries = [
   {
-    title: 'Children Ministry',
-    text: 'Helping children know Jesus through worship, play, and Scripture.',
+    title: 'Worship God',
+    text: 'We exist to worship God in Spirit and truth through Christ-centered gatherings.',
     image:
       'https://images.pexels.com/photos/1263349/pexels-photo-1263349.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
-    title: 'Youth Fellowship',
-    text: 'Building bold and grounded young believers through mentoring.',
+    title: 'Evangelize',
+    text: 'We are committed to evangelizing all communities with the gospel of Jesus Christ.',
     image:
       'https://images.pexels.com/photos/8468472/pexels-photo-8468472.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
-    title: 'Community Outreach',
-    text: 'Serving families and neighborhoods with practical compassion.',
+    title: 'Disciple And Serve',
+    text: 'We disciple believers and serve communities through the love and transforming power of Jesus Christ.',
     image:
       'https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
@@ -89,13 +89,13 @@ function HomePage() {
           <article data-reveal style={{ '--reveal-delay': '120ms' }}>
             <SectionHeading
               eyebrow="About Our Church"
-              title="A Place To Encounter God And Grow In Faith"
-              description="Kenya Assemblies of God is a Bible-believing Pentecostal church family committed to worship, discipleship, and mission."
+              title="A Theologically Sound And Culturally Relevant Church"
+              description="Kenya Assemblies of God (KAG) was planted in Kenya in 1972 by the US Assemblies of God Mission through the Oklahoma District of US Assemblies of God."
             />
             <ul className="list check-list">
-              <li>Strong biblical teaching rooted in God&apos;s Word</li>
-              <li>Spirit-led worship and prayer gatherings</li>
-              <li>A warm church family for all generations</li>
+              <li>Member of the World Assemblies of God Fellowship</li>
+              <li>Over 5,000 churches across Kenya as of 2026</li>
+              <li>Vision to double reach and membership by 2030</li>
             </ul>
             <a className="button-link" href="/about-us">
               Read More
@@ -123,20 +123,20 @@ function HomePage() {
 
         <section className="section stat-strip" data-reveal>
           <article data-reveal>
-            <h3>25+</h3>
-            <p>Years Of Ministry</p>
+            <h3>1972</h3>
+            <p>Planted In Kenya</p>
           </article>
           <article data-reveal style={{ '--reveal-delay': '90ms' }}>
-            <h3>1200+</h3>
-            <p>Members & Regular Attendees</p>
+            <h3>5,000+</h3>
+            <p>Churches In Kenya (2026)</p>
           </article>
           <article data-reveal style={{ '--reveal-delay': '180ms' }}>
-            <h3>35+</h3>
-            <p>Active Church Ministries</p>
+            <h3>2030</h3>
+            <p>Reach-Doubling Vision Year</p>
           </article>
           <article data-reveal style={{ '--reveal-delay': '270ms' }}>
-            <h3>50+</h3>
-            <p>Outreach Programs Annually</p>
+            <h3>Global</h3>
+            <p>World AG Fellowship Member</p>
           </article>
         </section>
 
@@ -166,13 +166,18 @@ function HomePage() {
         <section className="section split-banner">
           <article data-reveal>
             <p className="eyebrow">Our Vision</p>
-            <h2>To Raise Spirit-Filled Disciples Transforming Kenya For Christ</h2>
+            <h2>
+              To raise Holy Spirit empowered leaders who will inspire and resource a
+              generation to serve and influence every sphere of society through the
+              love of Jesus Christ in collaboration with His global church.
+            </h2>
           </article>
           <article data-reveal style={{ '--reveal-delay': '120ms' }}>
             <p className="eyebrow">Our Mission</p>
             <p>
-              We glorify God through Christ-centered worship, intentional
-              discipleship, and compassionate outreach to our communities.
+              KAG&apos;s mission is to raise a theologically sound and culturally
+              relevant church that is evangelizing, equipping and engaging all
+              communities with the gospel and the transforming power of Jesus Christ.
             </p>
           </article>
         </section>

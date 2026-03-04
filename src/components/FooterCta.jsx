@@ -2,9 +2,9 @@ function FooterCta() {
   return (
     <section className="cta-banner">
       <div>
-        <p className="eyebrow">Need Prayer Or Guidance?</p>
-        <h2>Let Our Church Family Walk With You</h2>
-        <p>Sunday Service at 9:00 AM | Nairobi, Kenya</p>
+        <p className="eyebrow">Our Mission</p>
+        <h2>Evangelizing, Equipping, And Engaging All Communities</h2>
+        <p>Kenya Assemblies of God | Planting Hope Through The Gospel Of Jesus Christ</p>
       </div>
       <a href="/contact-us">Contact Church Office</a>
     </section>

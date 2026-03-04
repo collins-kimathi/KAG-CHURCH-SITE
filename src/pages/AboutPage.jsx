@@ -4,20 +4,20 @@ import SiteFooter from '../components/SiteFooter'
 
 const values = [
   {
-    title: 'Biblical Truth',
-    text: 'Every message and ministry is anchored in Scripture.',
+    title: 'Worship',
+    text: 'The movement exists to worship God faithfully and wholeheartedly.',
   },
   {
-    title: 'Prayer Culture',
-    text: 'We seek God first in personal and corporate prayer.',
+    title: 'Evangelize',
+    text: 'We are committed to evangelizing all communities with the gospel.',
   },
   {
-    title: 'Holy Living',
-    text: 'We pursue a life that reflects Christ in word and action.',
+    title: 'Disciple',
+    text: 'We equip believers for Christ-centered life and ministry.',
   },
   {
-    title: 'Compassionate Mission',
-    text: 'We serve communities through evangelism and practical care.',
+    title: 'Serve',
+    text: 'We serve communities through the love of Jesus Christ.',
   },
 ]
 
@@ -27,7 +27,7 @@ function AboutPage() {
       <PageHero
         breadcrumb="About Us"
         title="About Our Church"
-        subtitle="Kenya Assemblies of God is a Christ-centered church family with a passion for worship, discipleship, and community transformation."
+        subtitle="Kenya Assemblies of God (KAG) is a Pentecostal denomination planted in Kenya in 1972 by the US Assemblies of God Mission through the Oklahoma District of US Assemblies of God."
       />
 
       <main>
@@ -42,31 +42,33 @@ function AboutPage() {
             <SectionHeading
               eyebrow="Who We Are"
               title="Building Faith, Family, And Mission"
-              description="Our church exists to proclaim the gospel, disciple believers, and help people discover God&apos;s purpose for their lives."
+              description="KAG is a member of the World Assemblies of God Fellowship and now represents a family of over 5,000 churches in Kenya (2026)."
             />
             <p>
-              Through prayer, worship, and practical ministry, we seek to
-              impact homes, schools, and neighborhoods across Kenya.
+              Our aim is to continue being a theologically sound and culturally
+              relevant church that is evangelizing, equipping, and engaging all
+              communities with the gospel and the transforming power of Jesus
+              Christ.
             </p>
           </article>
         </section>
 
         <section className="section stat-strip" data-reveal>
           <article data-reveal>
-            <h3>1988</h3>
-            <p>Church Founded</p>
+            <h3>1972</h3>
+            <p>Planted In Kenya</p>
           </article>
           <article data-reveal style={{ '--reveal-delay': '90ms' }}>
-            <h3>4</h3>
-            <p>Weekly Services</p>
+            <h3>5,000+</h3>
+            <p>Churches In Kenya (2026)</p>
           </article>
           <article data-reveal style={{ '--reveal-delay': '180ms' }}>
-            <h3>12</h3>
-            <p>Community Projects</p>
+            <h3>2030</h3>
+            <p>Reach & Membership Vision</p>
           </article>
           <article data-reveal style={{ '--reveal-delay': '270ms' }}>
-            <h3>40+</h3>
-            <p>Volunteer Leaders</p>
+            <h3>Global</h3>
+            <p>World AG Fellowship</p>
           </article>
         </section>
 
@@ -89,14 +91,18 @@ function AboutPage() {
 
         <section className="section split-banner">
           <article data-reveal>
-            <p className="eyebrow">Statement Of Faith</p>
-            <h2>We Believe In Salvation Through Jesus Christ Alone</h2>
+            <p className="eyebrow">Our Mission</p>
+            <h2>
+              To raise a theologically sound and culturally relevant church that
+              is evangelizing, equipping and engaging all communities.
+            </h2>
           </article>
           <article data-reveal style={{ '--reveal-delay': '120ms' }}>
             <p>
-              We affirm the authority of Scripture, the ministry of the Holy
-              Spirit, and the calling of the Church to make disciples of all
-              nations.
+              To raise Holy Spirit empowered leaders who will inspire and
+              resource a generation to serve and influence every sphere of
+              society through the love of Jesus Christ in collaboration with His
+              global church.
             </p>
           </article>
         </section>
