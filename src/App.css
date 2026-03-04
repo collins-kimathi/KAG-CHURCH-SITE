@@ -411,6 +411,11 @@ h2 {
   margin-top: 0.75rem;
 }
 
+.split-banner h2,
+.split-banner p {
+  overflow-wrap: anywhere;
+}
+
 .event-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -814,6 +819,23 @@ h2 {
 }
 
 @media (max-width: 1024px) {
+  .section {
+    padding: clamp(2.4rem, 4.6vw, 4rem) 0;
+  }
+
+  .hero-content {
+    padding: 5rem 0 4.8rem;
+  }
+
+  .site-nav a {
+    padding: 0.46rem 0.75rem;
+    font-size: 0.88rem;
+  }
+
+  .gallery-item img {
+    height: 210px;
+  }
+
   .grid-four,
   .grid-three,
   .feature-grid,
@@ -837,10 +859,105 @@ h2 {
   .site-header {
     grid-template-columns: 1fr;
     justify-items: start;
+    gap: 0.8rem;
+    padding: 0.9rem 0 1.1rem;
+  }
+
+  .brand-logo {
+    height: 44px;
   }
 
   .site-nav {
+    width: 100%;
     justify-self: start;
+    gap: 0.45rem;
+  }
+
+  .site-nav a {
+    flex: 1 1 calc(50% - 0.45rem);
+    text-align: center;
+    padding: 0.52rem 0.65rem;
+    font-size: 0.85rem;
+  }
+
+  .header-cta {
+    width: 100%;
+    text-align: center;
+    padding: 0.72rem 1rem;
+  }
+
+  .hero {
+    min-height: 82vh;
+  }
+
+  .hero-content {
+    padding: 3.4rem 0 3.6rem;
+  }
+
+  h1 {
+    max-width: 13ch;
+    font-size: clamp(1.9rem, 8vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.4rem, 5.5vw, 2rem);
+  }
+
+  .hero-content > p {
+    margin: 0.85rem 0 1.2rem;
+    max-width: 48ch;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions a {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .page-hero-content {
+    padding: 1.8rem 0 3rem;
+  }
+
+  .section {
+    padding: 2.3rem 0;
+  }
+
+  .card,
+  .panel,
+  .event-card,
+  .timeline-item,
+  .minister-category {
+    padding: 1rem;
+  }
+
+  .feature-card img,
+  .minister-card img {
+    height: 200px;
+  }
+
+  .split-banner {
+    padding: 1.1rem;
+    gap: 0.9rem;
+  }
+
+  .section-heading p,
+  .split-banner p {
+    font-size: 0.95rem;
+  }
+
+  .gallery-item img {
+    height: 190px;
+  }
+
+  .map-embed {
+    min-height: 260px;
+  }
+
+  .contact-form button {
+    justify-self: stretch;
   }
 
   .home-about,
@@ -866,6 +983,56 @@ h2 {
 }
 
 @media (max-width: 560px) {
+  .brand-logo {
+    height: 38px;
+  }
+
+  .site-nav a {
+    flex-basis: 100%;
+  }
+
+  .hero-content {
+    padding: 2.7rem 0 3rem;
+  }
+
+  h1 {
+    font-size: clamp(1.65rem, 9vw, 2.4rem);
+  }
+
+  .page-hero-content {
+    padding: 1.5rem 0 2.7rem;
+  }
+
+  .section {
+    padding: 1.9rem 0;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions a {
+    width: 100%;
+  }
+
+  .gallery-item img {
+    height: 170px;
+  }
+
+  .map-embed {
+    min-height: 220px;
+  }
+
+  .video-modal-overlay {
+    padding: 0.55rem;
+  }
+
+  .video-modal-head {
+    align-items: start;
+    flex-direction: column;
+  }
+
   .grid-four,
   .grid-three,
   .feature-grid,
