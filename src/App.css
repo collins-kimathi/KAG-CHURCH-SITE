@@ -576,6 +576,12 @@ h2 {
   margin: 0.9rem 0;
 }
 
+.contact-logo {
+  width: min(180px, 100%);
+  height: auto;
+  margin: 0.4rem 0 0.9rem;
+}
+
 .map-embed {
   width: 100%;
   min-height: 320px;

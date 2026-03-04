@@ -1,6 +1,7 @@
 import PageHero from '../components/PageHero'
 import SectionHeading from '../components/SectionHeading'
 import SiteFooter from '../components/SiteFooter'
+import kagLogo from '../../Images/KAG-LOGO.webp'
 
 const contactItems = [
   { title: 'Our Address', value: 'KAG Church, Nairobi County, Kenya' },
@@ -77,12 +78,13 @@ function ContactPage() {
               title="Church Location"
               description="You can also visit us physically during office hours."
             />
+            <img className="contact-logo" src={kagLogo} alt="KAG Church logo" />
             <iframe
               title="KAG Church Map"
               className="map-embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://maps.app.goo.gl/Xs6TJa8ySVVEH3mJ6"
+              src="https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1sKAG+Chuka+Town!6i14!3m1!1sen!5m1!1sen"
             />
             <p>Office Hours: Monday - Friday, 8:00 AM - 5:00 PM</p>
           </article>
