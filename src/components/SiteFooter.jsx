@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function SiteFooter() {
   return (
     <footer className="site-footer">
@@ -14,11 +16,11 @@ function SiteFooter() {
         <article>
           <h3>Quick Links</h3>
           <p>
-            <a href="/">Home</a> | <a href="/about-us">About Us</a> |{' '}
-            <a href="/ministers">Ministers</a>
+            <Link to="/">Home</Link> | <Link to="/about-us">About Us</Link> |{' '}
+            <Link to="/ministers">Ministers</Link>
           </p>
           <p>
-            <a href="/gallery">Gallery</a> | <a href="/contact-us">Contact Us</a>
+            <Link to="/gallery">Gallery</Link> | <Link to="/contact-us">Contact Us</Link>
           </p>
         </article>
 

@@ -1,4 +1,5 @@
 import kagLogo from '../../Images/KAG-LOGO.webp'
+import { Link, NavLink } from 'react-router-dom'
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -8,40 +9,29 @@ const navLinks = [
   { label: 'Contact Us', path: '/contact-us' },
 ]
 
-function getActiveRoute() {
-  if (typeof window === 'undefined') {
-    return '/'
-  }
-
-  const route = window.location.hash.replace('#', '') || window.location.pathname || '/'
-  const normalizedRoute = route.startsWith('/') ? route : `/${route}`
-  return normalizedRoute === '/pastor' ? '/ministers' : normalizedRoute
-}
-
 function SiteHeader({ transparent = false }) {
-  const activeRoute = getActiveRoute()
-
   return (
     <header className={`site-header${transparent ? ' is-transparent' : ''}`}>
-      <a href="/" className="brand-link">
+      <Link to="/" className="brand-link">
         <img className="brand-logo" src={kagLogo} alt="Kenya Assemblies of God logo" />
-      </a>
+      </Link>
 
       <nav className="site-nav" aria-label="Main navigation">
         {navLinks.map((link) => (
-          <a
+          <NavLink
             key={link.path}
-            className={activeRoute === link.path ? 'active' : ''}
-            href={link.path}
+            className={({ isActive }) => (isActive ? 'active' : '')}
+            end={link.path === '/'}
+            to={link.path}
           >
             {link.label}
-          </a>
+          </NavLink>
         ))}
       </nav>
 
-      <a href="/contact-us" className="header-cta">
+      <Link to="/contact-us" className="header-cta">
         Plan Visit
-      </a>
+      </Link>
     </header>
   )
 }

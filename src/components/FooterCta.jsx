@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function FooterCta() {
   return (
     <section className="cta-banner">
@@ -6,7 +8,7 @@ function FooterCta() {
         <h2>Evangelizing, Equipping, And Engaging All Communities</h2>
         <p>Kenya Assemblies of God | Planting Hope Through The Gospel Of Jesus Christ</p>
       </div>
-      <a href="/contact-us">Contact Church Office</a>
+      <Link to="/contact-us">Contact Church Office</Link>
     </section>
   )
 }

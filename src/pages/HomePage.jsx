@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import EventCard from '../components/EventCard'
 import FooterCta from '../components/FooterCta'
 import HeroSection from '../components/HeroSection'
@@ -97,9 +98,9 @@ function HomePage() {
               <li>Over 5,000 churches across Kenya as of 2026</li>
               <li>Vision to double reach and membership by 2030</li>
             </ul>
-            <a className="button-link" href="/about-us">
+            <Link className="button-link" to="/about-us">
               Read More
-            </a>
+            </Link>
           </article>
         </section>
 
@@ -226,9 +227,9 @@ function HomePage() {
             ))}
           </div>
           <div className="centered-link" data-reveal style={{ '--reveal-delay': '220ms' }}>
-            <a className="button-link" href="/gallery">
+            <Link className="button-link" to="/gallery">
               View Full Gallery
-            </a>
+            </Link>
           </div>
         </section>
       </main>

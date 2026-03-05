@@ -1,4 +1,5 @@
 import SiteHeader from './SiteHeader'
+import { Link } from 'react-router-dom'
 
 function HeroSection() {
   return (
@@ -40,10 +41,10 @@ function HeroSection() {
           families and transform communities with the gospel of Jesus Christ.
         </p>
         <div className="hero-actions" data-reveal style={{ '--reveal-delay': '320ms' }}>
-          <a href="/about-us">Discover More</a>
-          <a className="secondary" href="/contact-us">
+          <Link to="/about-us">Discover More</Link>
+          <Link className="secondary" to="/contact-us">
             Join This Sunday
-          </a>
+          </Link>
         </div>
       </div>
     </header>
