@@ -11,12 +11,52 @@
 
 #root {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .site-shell {
   min-height: 100vh;
   background: var(--light-bg);
   color: var(--ink);
+  overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+main,
+.section,
+.site-header,
+.hero-content,
+.page-hero-content,
+.home-about > *,
+.two-column > *,
+.grid-three > *,
+.grid-four > *,
+.feature-grid > *,
+.event-list > *,
+.gallery-grid > *,
+.gallery-strip > *,
+.minister-grid > *,
+.timeline > *,
+.footer-grid > *,
+.split-banner > *,
+.cta-banner > * {
+  min-width: 0;
+}
+
+.section-heading h2,
+.section-heading p,
+.minister-category-head p,
+.gallery-title,
+.gallery-meta,
+.video-modal-head h3,
+.video-modal-subtitle,
+.video-modal-desc {
+  overflow-wrap: anywhere;
 }
 
 .site-header {

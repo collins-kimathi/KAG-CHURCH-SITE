@@ -16,4 +16,5 @@ body {
 body {
   font-family: 'DM Sans', 'Segoe UI', sans-serif;
   background: #f7f3ec;
+  overflow-x: hidden;
 }
