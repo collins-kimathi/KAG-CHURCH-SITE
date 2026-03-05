@@ -12,6 +12,7 @@ const navLinks = [
 
 function SiteHeader({ transparent = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [showMenuToggle, setShowMenuToggle] = useState(true)
   const location = useLocation()
 
   useEffect(() => {
@@ -33,17 +34,37 @@ function SiteHeader({ transparent = false }) {
     return () => window.removeEventListener('keydown', handleEscape)
   }, [isMenuOpen])
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      if (currentScrollY <= 10) {
+        setShowMenuToggle(true)
+      } else {
+        setShowMenuToggle(false)
+        setIsMenuOpen(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <header className={`site-header${transparent ? ' is-transparent' : ''}${isMenuOpen ? ' is-menu-open' : ''}`}>
       <Link to="/" className="brand-link">
         <img className="brand-logo" src={kagLogo} alt="Kenya Assemblies of God logo" />
       </Link>
 
+      <Link to="/contact-us" className="header-cta">
+        Plan Visit
+      </Link>
+
       <button
         aria-controls="main-nav"
         aria-expanded={isMenuOpen}
         aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-        className="menu-toggle"
+        className={`menu-toggle${showMenuToggle ? '' : ' is-hidden'}`}
         onClick={() => setIsMenuOpen((prev) => !prev)}
         type="button"
       >
@@ -68,15 +89,7 @@ function SiteHeader({ transparent = false }) {
             {link.label}
           </NavLink>
         ))}
-
-        <Link className="site-nav-cta" onClick={() => setIsMenuOpen(false)} to="/contact-us">
-          Plan Visit
-        </Link>
       </nav>
-
-      <Link to="/contact-us" className="header-cta">
-        Plan Visit
-      </Link>
     </header>
   )
 }
