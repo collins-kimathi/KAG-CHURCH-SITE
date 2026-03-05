@@ -15,7 +15,7 @@ function HeroSection() {
         >
           <source src="/church-hero.mp4" type="video/mp4" />
           <source
-            src="https://cdn.coverr.co/videos/coverr-a-woman-walks-down-the-stairs-from-the-church-1158/1080p.mp4"
+            src="public/walkdown.mp4"
             type="video/mp4"
           />
           <source

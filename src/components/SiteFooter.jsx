@@ -7,8 +7,8 @@ function SiteFooter() {
         <article>
           <h3>Kenya Assemblies of God</h3>
           <p>
-            A Pentecostal denomination planted in Kenya in 1972, now a family
-            of over 5,000 churches (2026), committed to evangelizing,
+            A Pentecostal denomination founded in Kenya in 1972, now a family
+            of over 5,000 churches in  (2026), committed to evangelizing,
             equipping, and engaging communities with the gospel of Jesus Christ.
           </p>
         </article>
@@ -26,7 +26,7 @@ function SiteFooter() {
 
         <article>
           <h3>Reach Us</h3>
-          <p>KAG Church, Nairobi County, Kenya</p>
+          <p>KAG Church, Tharaka-nithi County, Kenya</p>
           <p>+254 700 000 000</p>
           <p>info@kagchurch.org</p>
         </article>
