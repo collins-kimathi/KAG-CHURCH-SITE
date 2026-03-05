@@ -15,7 +15,7 @@ function HeroSection() {
         >
           <source src="/church-hero.mp4" type="video/mp4" />
           <source
-            src="public/walkdown.mp4"
+            src="/walkdown.mp4"
             type="video/mp4"
           />
           <source
