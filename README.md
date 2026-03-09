@@ -1,16 +1,87 @@
-# React + Vite
+# KAG Church Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite website for Kenya Assemblies of God (KAG) church content, including:
+- Homepage with ministry highlights and service times
+- About, Contact, Ministers, and Gallery pages
+- Embedded YouTube sermon/gallery videos via modal player
+- Responsive layout with animated section reveal effects
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19
+- React Router 7
+- Vite 8
+- ESLint 9 (flat config)
 
-## React Compiler
+## Routes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `/` - Home
+- `/about-us` - About
+- `/contact-us` - Contact
+- `/ministers` - Ministers
+- `/gallery` - Gallery
+- Redirects
+- `/about` -> `/about-us`
+- `/contact` -> `/contact-us`
+- `/pastor` -> `/ministers`
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js 20+ (recommended)
+- npm
+
+### Install and Run
+
+```bash
+npm install
+npm run dev
+```
+
+Default local URL: `http://localhost:5173`
+
+## Available Scripts
+
+- `npm run dev` - Start Vite dev server
+- `npm run build` - Build production assets to `dist/`
+- `npm run preview` - Preview the production build locally
+- `npm run lint` - Run ESLint
+
+## Project Structure
+
+```text
+src/
+  components/
+  pages/
+  App.jsx
+  App.css
+  index.css
+  main.jsx
+public/
+  walkdown.mp4
+Images/
+  KAG-LOGO.webp
+  logo.png
+```
+
+## Content Editing Guide
+
+- Home page content (services, ministries, sermon cards): `src/pages/HomePage.jsx`
+- About page text and values: `src/pages/AboutPage.jsx`
+- Contact details and form layout: `src/pages/ContactPage.jsx`
+- Ministers and milestones data: `src/pages/PastorPage.jsx`
+- Gallery video list: `src/pages/GalleryPage.jsx`
+
+## Media Notes
+
+- Hero video sources are defined in `src/components/HeroSection.jsx`.
+- The app currently includes `public/walkdown.mp4`.
+- If you want a custom primary hero video, add `public/church-hero.mp4`.
+
+## Build for Production
+
+```bash
+npm run build
+npm run preview
+```
