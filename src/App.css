@@ -14,6 +14,125 @@
   overflow-x: hidden;
 }
 
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.loading-screen.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.loading-screen__backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top, rgba(207, 162, 79, 0.24), transparent 32%),
+    linear-gradient(180deg, rgba(15, 15, 16, 0.72), rgba(15, 15, 16, 0.66));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.loading-screen__content {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 0.7rem;
+  text-align: center;
+  color: var(--white);
+}
+
+.loading-screen__logo-wrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(44vw, 13rem);
+  aspect-ratio: 1;
+}
+
+.loading-screen__ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(234, 216, 184, 0.35);
+}
+
+.loading-screen__ring--outer {
+  inset: 0;
+  animation: loaderOrbit 2.6s linear infinite;
+}
+
+.loading-screen__ring--inner {
+  inset: 14%;
+  border-color: rgba(207, 162, 79, 0.55);
+  animation: loaderPulse 1.7s ease-in-out infinite;
+}
+
+.loading-screen__logo {
+  width: 52%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.28));
+  animation: loaderFloat 1.9s ease-in-out infinite;
+}
+
+.loading-screen__title {
+  margin: 0;
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  letter-spacing: 0.03em;
+}
+
+.loading-screen__text {
+  margin: 0;
+  color: #ebdfcb;
+  font-size: 0.98rem;
+}
+
+@keyframes loaderOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loaderPulse {
+  0%,
+  100% {
+    transform: scale(0.92);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes loaderFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
 .site-shell {
   min-height: 100vh;
   background: var(--light-bg);
