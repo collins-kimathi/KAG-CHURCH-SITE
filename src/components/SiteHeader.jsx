@@ -1,23 +1,21 @@
 import kagLogo from '../../Images/KAG-LOGO.webp'
 import { useEffect, useState } from 'react'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'About Us', path: '/about-us' },
-  { label: 'Ministers', path: '/ministers' },
-  { label: 'Gallery', path: '/gallery' },
+  { label: 'Events', path: '/events' },
+  { label: 'Family Life', path: '/family-life' },
+  { label: 'Leadership', path: '/ministers' },
+  { label: 'Sermons', path: '/gallery' },
+  { label: 'Giving', path: '/giving' },
   { label: 'Contact Us', path: '/contact-us' },
 ]
 
 function SiteHeader({ transparent = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [showMenuToggle, setShowMenuToggle] = useState(true)
-  const location = useLocation()
-
-  useEffect(() => {
-    setIsMenuOpen(false)
-  }, [location.pathname])
 
   useEffect(() => {
     if (!isMenuOpen) {

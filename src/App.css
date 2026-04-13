@@ -389,6 +389,11 @@ h2 {
   transition: all 0.2s ease;
 }
 
+.button-link-secondary {
+  background: transparent;
+  color: var(--ink);
+}
+
 .hero-actions .secondary {
   background: transparent;
   color: var(--white);
@@ -671,6 +676,16 @@ h2 {
   object-fit: cover;
 }
 
+.community-photo {
+  margin: 0;
+}
+
+.community-photo figcaption {
+  margin-top: 0.55rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .centered-link {
   margin-top: 1.2rem;
   text-align: center;
@@ -739,6 +754,7 @@ h2 {
 }
 
 .contact-form input,
+.contact-form select,
 .contact-form textarea {
   width: 100%;
   border: 1px solid var(--line);
@@ -751,6 +767,40 @@ h2 {
 .contact-form button {
   justify-self: start;
   margin-top: 0.65rem;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 1.1rem 0 1.4rem;
+}
+
+.filter-chip {
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.filter-chip.is-active {
+  border-color: var(--gold);
+  background: var(--gold);
+}
+
+.form-status {
+  margin: 0.25rem 0 0;
+  color: #6b4a10;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .map-placeholder {
@@ -808,6 +858,15 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.9rem;
+}
+
+.ministry-role-list {
+  margin: 0;
+}
+
+.giving-action {
+  color: #6b4a10;
+  font-weight: 600;
 }
 
 .minister-card {
@@ -1206,6 +1265,11 @@ h2 {
 
   .contact-form button {
     justify-self: stretch;
+  }
+
+  .contact-actions {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .home-about,

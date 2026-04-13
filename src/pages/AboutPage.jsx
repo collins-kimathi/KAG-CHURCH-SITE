@@ -1,6 +1,8 @@
 import PageHero from '../components/PageHero'
+import Seo from '../components/Seo'
 import SectionHeading from '../components/SectionHeading'
 import SiteFooter from '../components/SiteFooter'
+import { churchInfo, communityPhotos } from '../data/churchData'
 
 const values = [
   {
@@ -24,25 +26,29 @@ const values = [
 function AboutPage() {
   return (
     <div className="site-shell">
+      <Seo
+        title="About Us"
+        description="Learn about KAG Chuka Church, our mission, values, and commitment to worship, discipleship, prayer, and community care in Chuka Town."
+      />
       <PageHero
         breadcrumb="About Us"
         title="About Our Church"
-        subtitle="Kenya Assemblies of God (KAG) is a Pentecostal denomination planted in Kenya in 1972 by the US Assemblies of God Mission through the Oklahoma District of US Assemblies of God."
+        subtitle={`${churchInfo.name} is a Kenya Assemblies of God congregation serving ${churchInfo.location} through worship, discipleship, prayer, and community care.`}
       />
 
       <main>
         <section className="section home-about">
           <article className="image-panel" data-reveal>
             <img
-              src="https://images.pexels.com/photos/167676/pexels-photo-167676.jpeg?auto=compress&cs=tinysrgb&w=1400"
-              alt="Church congregation"
+              src={communityPhotos[0].image}
+              alt="KAG Chuka Church ministry moment"
             />
           </article>
           <article data-reveal style={{ '--reveal-delay': '120ms' }}>
             <SectionHeading
               eyebrow="Who We Are"
               title="Building Faith, Family, And Mission"
-              description="KAG is a member of the World Assemblies of God Fellowship and now represents a family of over 5,000 churches in Kenya (2026)."
+              description="KAG is a member of the World Assemblies of God Fellowship and part of a church family of over 5,000 congregations across Kenya."
             />
             <p>
               Our aim is to continue being a theologically sound and culturally

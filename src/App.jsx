@@ -4,7 +4,10 @@ import './App.css'
 import LoadingScreen from './components/LoadingScreen'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
+import EventsPage from './pages/EventsPage'
+import FamilyPage from './pages/FamilyPage'
 import GalleryPage from './pages/GalleryPage'
+import GivingPage from './pages/GivingPage'
 import HomePage from './pages/HomePage'
 import PastorPage from './pages/PastorPage'
 
@@ -89,6 +92,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about-us" element={<AboutPage />} />
         <Route path="/contact-us" element={<ContactPage />} />
+        <Route path="/events" element={<EventsPage />} />
+        <Route path="/family-life" element={<FamilyPage />} />
+        <Route path="/giving" element={<GivingPage />} />
         <Route path="/ministers" element={<PastorPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/about" element={<Navigate replace to="/about-us" />} />

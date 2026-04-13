@@ -37,8 +37,9 @@ function HeroSection() {
           Loving God, Loving Others, And Serving The World
         </h1>
         <p data-reveal style={{ '--reveal-delay': '220ms' }}>
-          Join us in worship, prayer, and Bible teaching as we build strong
-          families and transform communities with the gospel of Jesus Christ.
+          Worship with KAG Chuka Church in prayer, Bible teaching, and
+          Christ-centered community as we build strong families and serve our
+          region with the gospel of Jesus Christ.
         </p>
         <div className="hero-actions" data-reveal style={{ '--reveal-delay': '320ms' }}>
           <Link to="/about-us">Discover More</Link>

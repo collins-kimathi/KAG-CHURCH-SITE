@@ -4,11 +4,11 @@ function FooterCta() {
   return (
     <section className="cta-banner">
       <div>
-        <p className="eyebrow">Our Mission</p>
-        <h2>Evangelizing, Equipping, And Engaging All Communities</h2>
-        <p>Kenya Assemblies of God | Planting Hope Through The Gospel Of Jesus Christ</p>
+        <p className="eyebrow">Plan Your Visit</p>
+        <h2>Join Us This Sunday In Chuka Town</h2>
+        <p>Worship with us, meet the church family, and let us help you feel at home from your first visit.</p>
       </div>
-      <Link to="/contact-us">Contact Church Office</Link>
+      <Link to="/contact-us">Get Visit Details</Link>
     </section>
   )
 }
